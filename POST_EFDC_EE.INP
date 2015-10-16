@@ -1,0 +1,32 @@
+C1----------------------------------------------------------------------------
+C IOFILE   : EFDC RESULT FILE TO READ
+             1=VELOCITY, 2=ELEVATION, 3=SALINITY, 4=TEMPERATURE,
+             5=DYE,      6=SFL,       7=TOX,      8=SED,         9=SND,
+            10=WaterQuality,  11=Convert tecplot,  12=Limitation
+C SDAY     : STARTING TIME TO ANALYSIST THE INSTANTAENEOUS HORIZONTAL FIELD & TSRS [DAY]
+C EDAY     : ENDING TIME TO ANALYSIS THE INSTANTAENEOUS HORIZONTAL FIELD & TSRS [DAY]
+C IHOR     : HORIZONTAL DIST. FILE PRINT (1: YES, OTHERWISE : NO)
+C NTSR     : NUMBER OF TIMESERIES POINT
+C BELADJ   : ADJUSTMENT TO BOTTOM BED ELEVATION FIELD IN METERS (CARD11 in EFDC.INP)
+C BELCVRT  : CONVERTS INPUT BOTTOM BED ELEVATION FIELD TO METERS(CARD11 in EFDC.INP)
+C ISBEDSTR : CARD36A in EFDC.INP
+C IWRSP    : CARD40 in EFDC.INP
+C ISWAVE   : CARD14 in EFDC.INP
+C TBEDIT   : ASER.INP - Line 38, 8th column
+C IBEDLD   : CARD42A in EFDC.INP
+C DTWQ     : WQ ALONE DT (SEC)
+Ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+ IOFILE   SDAY   EDAY   IHOR   NTSR !!!BELADJ   BELCVRT  ISBEDSTR  IWRSP  ISWAVE  TBEDIT IBEDLD DTWQ  !!! 이후부터는 불필요함
+   10      0.0    366.0   0.0   1.0      0.0       1.0       0.0    0.0     0.0     0.0    0.0  30.0
+C2----------------------------------------------------------------------------
+C IWQOUT   : 0=WQ 21개 변수 출력, 1=TOC,CHL,TN,TP,DO,DIN 출력 
+C IPO4OUT  : 0=PO4t 출력, 1=PO4d 출력 
+Ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+ IWQOUT   IPO4OUT
+    0        1
+C3----------------------------------------------------------------------------
+C II : I INDEX FOR TIMESERIES
+C JJ : J INDEX FOR TIMESERIES
+Cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+ II    JJ
+ 15     7  !  'ST1'
